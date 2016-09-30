@@ -6,7 +6,7 @@ var app = express();
 app.use(morgan('combined'));
 
 var articles = {
-  'article-One': {
+ 'article-One': {
     title: "Article One | Shivani Reddy",
     heading : "Article One",
     date : "Sep 30, 2016",
