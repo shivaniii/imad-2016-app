@@ -15,6 +15,10 @@ var articleOne= {
 };
 
 function createTemplate (data) {
+    var title = data.title;
+    var date = data.date;
+    var content = data.content;
+    
 var htmlTemplate =
 `<html>
     <head>
@@ -38,7 +42,8 @@ var htmlTemplate =
 </div>
 </div>
 </body>
-</html> }`
+</html>` ;
+return htmlTemplate }
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
