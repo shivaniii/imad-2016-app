@@ -31,6 +31,7 @@ function createTemplate (data) {
     var date = data.date;
     var heading = data.heading;
     var content = data.content;
+    
 var htmlTemplate =
 `<html>
     <head>
@@ -56,7 +57,7 @@ var htmlTemplate =
 </body>
 </html>` ;
 return htmlTemplate;
-}
+};
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
@@ -67,7 +68,7 @@ app.get('/:articleName', function (req, res) {
 var articleName=req.params.articleName;
   res.send(createTemplate(articles[articleName]));
 });
-;
+
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
