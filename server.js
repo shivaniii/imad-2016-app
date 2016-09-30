@@ -35,7 +35,7 @@ var htmlTemplate =
 `<html>
     <head>
         <title>
-        ${title} 
+         ${title} 
         </title>
         <meta name="viewport" content="width-device-width, initial-scale=1" />
         <link href="/ui/style.css" rel="stylesheet" />
@@ -55,7 +55,8 @@ var htmlTemplate =
 </div>
 </body>
 </html>` ;
-return htmlTemplate }
+return htmlTemplate;
+}
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
