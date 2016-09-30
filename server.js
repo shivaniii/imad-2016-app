@@ -15,10 +15,10 @@ var articles = {
      <p>This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.</p>`
 },
 'article-two': {
-   title: "Article Three | Shivani Reddy",
+   title: "Article Two | Shivani Reddy",
     heading : "Article Three",
     date : "Sep 30, 2016",
-    content : `<p> This is the content for my third article.</p>`},
+    content : `<p> This is the content for my second article.</p>`},
     
 'article-three': { 
     title: "Article Three | Shivani Reddy",
