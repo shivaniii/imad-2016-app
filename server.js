@@ -26,8 +26,18 @@ var articles = {
     date : "Sep 30, 2016",
     content : `<p> This is the content for my third article.</p>`},
 };
-function createTemplate (data) {
-    var title = data.title;
+function createTemplate (data) {}
+    app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+});
+
+var counter = 0;
+app.get('/counter', function (req, res) {
+   counter = counter + 1;
+   res.send(counter.toString());
+});
+
+{    var title = data.title;
     var date = data.date;
     var heading = data.heading;
     var content = data.content;
