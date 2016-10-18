@@ -7,24 +7,25 @@ app.use(morgan('combined'));
 
 var articles = {
  'article-one': {
-    title: "Article One | Shivani Reddy",
-    heading : "Article One",
-    date : "Sep 30, 2016",
-    content : `<p> This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.</p>
-     <p>This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is  the content for my first article.This is the content for my first article.</p>
-     <p>This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.</p>`
+    title: "Welcome to Anyvasoft | Anumula Shivani",
+    heading : "Anyvasoft",
+    date : "Oct 18, 2016",
+    content : `<p>Welcome to Anyvasoft, India</p>
+    <p> Anyvasoft is under construction. <p> `
 },
 'article-two': {
-   title: "Article Two | Shivani Reddy",
-    heading : "Article Two",
-    date : "Sep 30, 2016",
-    content : `<p> This is the content for my second article.</p>`},
+   title: "",
+    heading : "Products | Anyvasoft",
+    date : "Oct 18, 2016",
+    content : `<p>Products of Anyvasoft will be available here.</p>
+    <p>Visit later for more information<p>
+    <p>This webpage is under construction`},
     
 'article-three': { 
-    title: "Article Three | Shivani Reddy",
-    heading : "Article Three",
-    date : "Sep 30, 2016",
-    content : `<p> This is the content for my third article.</p>`},
+    title: "Feedback | Anyvasoft",
+    heading : "",
+    date : "Oct 18, 2016",
+    content : `<p>Please feel free to share your feedback.</p>`},
 };
 function createTemplate (data) {
 
