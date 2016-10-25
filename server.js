@@ -12,7 +12,7 @@ var config = {
 }
 var app = express();
 app.use(morgan('combined'));
-           '
+           
  app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
@@ -32,7 +32,7 @@ app.get('/test-db', function (req, res) {
             res.send(JSON.stringify(result));
         }
         }
-    }
+);
 });
 
 app.get('/my-interests.html', function (req, res) {
