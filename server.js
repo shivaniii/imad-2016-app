@@ -25,17 +25,6 @@ app.get('/login.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'login.html'));
 });
 
-app.get('/LoginServlet.java', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'LoginServlet.java'));
-});
-
-app.get('/LogoutServlet.java', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'LogoutServlet.java'));
-});
-
-app.get('/ProfileServlet.java', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'ProfileServlet.java'));
-});
 app.get('/about-me.html', function (req, res) {
     res.sendFile(path.join(__dirname, 'ui', 'about-me.html'));
 });
