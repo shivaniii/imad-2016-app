@@ -17,7 +17,7 @@ app.get('/my-interests.html', function (req, res) {
     res.sendFile(path.join(__dirname, 'ui', 'my-interests.html'));
 });
 
-app.get('/', function (req, res) {
+app.get('/login.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'login.html'));
 });
 
