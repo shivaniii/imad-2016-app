@@ -98,7 +98,7 @@ a {
     cursor:pointer;
     transition:.5s ease;
     &:hover {
-      background:$main-dark;
+      background:$main-light;
       color:$white;
     }
   }
