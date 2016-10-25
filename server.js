@@ -18,9 +18,24 @@ app.get('/my-interests.html', function (req, res) {
 });
 
 app.get('/login.html', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'link.html'));
+});
+
+app.get('/login.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'login.html'));
 });
 
+app.get('/login.html', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'LoginServlet.java'));
+});
+
+app.get('/login.html', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'LogoutServlet.java'));
+});
+
+app.get('/login.html', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'ProfileServlet.java'));
+});
 app.get('/about-me.html', function (req, res) {
     res.sendFile(path.join(__dirname, 'ui', 'about-me.html'));
 });
