@@ -17,17 +17,6 @@ app.get('/my-interests.html', function (req, res) {
     res.sendFile(path.join(__dirname, 'ui', 'my-interests.html'));
 });
 
-app.get('/link.html', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'link.html'));
-});
-
-app.get('/login.html', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'login.html'));
-});
-app.post('/login.html', function (req, res) {
-    res.sendFile(path.join(__dirname, 'ui', 'LoginServlet.java'));
-});
-
 app.get('/about-me.html', function (req, res) {
     res.sendFile(path.join(__dirname, 'ui', 'about-me.html'));
 });
