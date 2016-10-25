@@ -25,15 +25,15 @@ app.get('/login.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'login.html'));
 });
 
-app.get('/loginservlet.java', function (req, res) {
+app.get('/LoginServlet.java', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'LoginServlet.java'));
 });
 
-app.get('/logoutservlet.java', function (req, res) {
+app.get('/LogoutServlet.java', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'LogoutServlet.java'));
 });
 
-app.get('/profileservlet.java', function (req, res) {
+app.get('/ProfileServlet.java', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'ProfileServlet.java'));
 });
 app.get('/about-me.html', function (req, res) {
