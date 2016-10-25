@@ -1,5 +1,4 @@
-<!doctype html> <head> <title> Login Servlet </title> </head>
-<body> import java.io.IOException;  
+import java.io.IOException;  
 import java.io.PrintWriter;  
   
 import javax.servlet.ServletException;  
@@ -29,4 +28,3 @@ public class LoginServlet extends HttpServlet {
         out.close();  
     }  
 }  
-</body>
