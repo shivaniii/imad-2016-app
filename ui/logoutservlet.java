@@ -1,4 +1,5 @@
-import java.io.IOException;  
+<!doctype html>
+<html> <head> <title> Succesfully Logged Out! </title> </head> <body> <import java.io.IOException;  
 import java.io.PrintWriter;  
   
 import javax.servlet.ServletException;  
@@ -22,3 +23,5 @@ public class LogoutServlet extends HttpServlet {
             out.close();  
     }  
 }  
+</body>
+</html>
