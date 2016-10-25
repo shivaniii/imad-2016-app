@@ -4,7 +4,33 @@
         <link href="/ui/style.css" rel="stylesheet" />
     </head>
     <body>
-        <div>
+       <style>
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+</style>
+
+<div class="dropdown">
+  <span>Mouse over me</span>
+  <div class="dropdown-content">
+    <p>My Interests, About Me</p>
+  </div>
+</div> <div>
     <a href="my-interests.html"> Interests</a> <div class="verticalLine"></div> <a href="about-me.html">About Me</a>
         </div>
         <div class="container"></div>
