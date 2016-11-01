@@ -21,7 +21,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/articles/articleName', function (req, res) {
+app.get('/articles/:articleName', function (req, res) {
     //articleNae == article-one
     //articles(articleName) =={} content object for article-one
  pool.query("SELECT * FROM artcle WHERE title =" + req.params.articleName, function (err, result){
