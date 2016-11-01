@@ -51,6 +51,7 @@ app.get('/test-db', function (req, res) {
         }
 );
 });
+function createTemplate (data) 
 
 app.get('/my-interests.html', function (req, res) {
     res.sendFile(path.join(__dirname, 'ui', 'my-interests.html'));
