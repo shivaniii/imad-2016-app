@@ -127,7 +127,9 @@ app.get('/articles/:articleName', function (req, res) {
      } else {
         var articleData= result.rows[0];
         res.sendFile(createTemplate(articleData));
-     }}
+     }
+         
+     }
  });
 });
 
