@@ -97,14 +97,14 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 app.get('/article-one', function (req, res) {
- res.send(createTemplate(articleOne));
+ res.send(createTemplate(article-One));
 });
 
 app.get('/article-two', function (req, res) {
-  res.send(createTemplate(articleTwo));
+  res.send(createTemplate(article-Two));
 });
 app.get('/article-three', function (req, res) {
-  res.send(createTemplate(articleThree));
+  res.send(createTemplate(article-Three));
 });
 
 app.get('/articles/:articleName', function (req, res) {
