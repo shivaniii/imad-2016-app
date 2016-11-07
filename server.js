@@ -3,7 +3,8 @@ var morgan = require('morgan');
 var path = require('path');
 var Pool = require('pg').Pool;
 
-var articleOne = {
+var articles = {
+'article-One' : {
    title : 'Internet | Anumula Shivani',
    heading : 'Internet',
    date : 'Nov 7, 2016',
@@ -17,9 +18,9 @@ var articleOne = {
 <p>The Internet has no centralized governance in either technological implementation or policies for access and usage; each constituent network sets its own policies. Only the overreaching definitions of the two principal name spaces in the Internet, the Internet Protocol address space and the Domain Name System (DNS), are directed by a maintainer organization, the Internet Corporation for Assigned Names and Numbers (ICANN). The technical underpinning and standardization of the core protocols is an activity of the Internet Engineering Task Force (IETF), a non-profit organization of loosely affiliated international participants that anyone may associate with by contributing technical expertise. </p> 
 [Content Source : Wikipedia] `
    
-};
-articleTwo = {
-title : 'HTML | Anumula Shivani',
+},
+'article-Two' : {
+   title : 'HTML | Anumula Shivani',
    heading : 'HTML',
    date : 'Nov 7, 2016',
    content :`<p> HyperText Markup Language (HTML) is the standard markup language for creating web pages and web applications. With Cascading Style Sheets (CSS), and JavaScript, it forms a triad of cornerstone technologies for the World Wide Web. Web browsers receive HTML documents from a webserver or from local storage and render them into multimedia web pages. HTML describes the structure of a web page semantically and originally included cues for the appearance of the document.
@@ -29,8 +30,8 @@ title : 'HTML | Anumula Shivani',
 
 <p>HTML can embed programs written in a scripting language such as JavaScript which affect the behavior and content of web pages. Inclusion of CSS defines the look and layout of content. The World Wide Web Consortium (W3C), maintainer of both the HTML and the CSS standards, has encouraged the use of CSS over explicit presentational HTML since 1997. </p>
 `
-   };
-   articleThree = {
+   },
+   'article-Three' : {
        title : 'Javascript | Anumula Shivani',
    heading : 'Javascript',
    date : 'Nov 7, 2016',
