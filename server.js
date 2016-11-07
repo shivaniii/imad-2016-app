@@ -97,7 +97,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/:articleName', function (req, res){
-    res.send(createTEmplate(articles[articleName]));
+    res.send(createTemplate(articles[articleName]));
 });
 
 var pool = new Pool(config);
