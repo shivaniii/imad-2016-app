@@ -4,7 +4,7 @@ var path = require('path');
 var Pool = require('pg').Pool;
 
 var articles = {
-'article-One' : {
+'article-one' : {
    title : 'Internet | Anumula Shivani',
    heading : 'Internet',
    date : 'Nov 7, 2016',
@@ -19,7 +19,7 @@ var articles = {
 [Content Source : Wikipedia] `
    
 },
-'article-Two' : {
+'article-two' : {
    title : 'HTML | Anumula Shivani',
    heading : 'HTML',
    date : 'Nov 7, 2016',
@@ -31,7 +31,7 @@ var articles = {
 <p>HTML can embed programs written in a scripting language such as JavaScript which affect the behavior and content of web pages. Inclusion of CSS defines the look and layout of content. The World Wide Web Consortium (W3C), maintainer of both the HTML and the CSS standards, has encouraged the use of CSS over explicit presentational HTML since 1997. </p>
 `
    },
-'article-Three' : {
+'article-three' : {
        title : 'Javascript | Anumula Shivani',
    heading : 'Javascript',
    date : 'Nov 7, 2016',
