@@ -76,7 +76,7 @@ ${title}
 ${heading}
 </h3>
 <div>
-${date.toString()}
+${datedata.toString()}
 </div>
 <div>
 ${content}
