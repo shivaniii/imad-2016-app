@@ -100,6 +100,8 @@ var hashedString = hash(req.params.input, 'this-is-some-random-string');
 res.send(hashedString);
 });
 
+app.get
+
 var pool = new Pool(config);
 app.get('/test-db', function (req, res) {
     // make a select request
