@@ -14,8 +14,11 @@ submit.onclick = function() {
              var uI = document.getElementById('namelist');
              uI.InnerHTML = list ;
          }}};
-                 var nameInput = document.getElementById('name');
+                 var username = document.getElementById('username').value;
+                 var password = document.getElementById('password').value;
+                 console.log(username);
+                 console.log(password);
 var name =nameInput.value;
-request.open('POST', 'http://shivaniii.imad.hasura-app.io/submit-name?name=' + name, true);
+request.open('POST', 'http://shivaniii.imad.hasura-app.io/login' , true);
 request.send(JSON.stringify({username : username, password : password}));
 };
