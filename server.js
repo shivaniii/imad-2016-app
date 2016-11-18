@@ -121,7 +121,7 @@ app.post('/create-user', function (req, res){
              var salt = dbString.split('$')[2];
              var hashedPassword = hash(password, salt); //creating a hash on the password submitted and the original salt
              if (hashedPassword === dbString) {
-                 req.session.auth= [userId: result.rows[0].id];
+                 req.session.auth= {userId: result.rows[0].id};
              
             res.send('Credentials correct!');
             } else {
