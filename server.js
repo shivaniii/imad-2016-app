@@ -132,9 +132,13 @@ app.post('/create-user', function (req, res){
 ); 
 });
 
-app.post('/login', function (req, res){
-    
-})
+app.post('/check-login', function (req, res){
+    if (req.session && req.session.auth && req.session.userId) {
+        res.send('You are logged in:' + req.session.auth.userId.toString());
+    } else {
+        ('You are not logged in');
+    }
+});
 
 var pool = new Pool(config);
 app.get('/test-db', function (req, res) {
