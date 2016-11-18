@@ -25,19 +25,7 @@
            <input type ="text" id="username" placeholder="username" />
             <input type ="password" id="password" />
              <input type ="submit" id="submit_btn" />
-             submit.onclick = function() {
-    var request = new XMLHttpRequest();
-    request.onreadystatechange = function () {
-     if (request.readyState === XMLHttpRequest.DONE) {
-         if (request.status === 200) {
-           alert('Logged in successfully');
-         } else if (request.status === 403) {
-             alert('Username/Password is incorrect!');
-         } else if (request.status === 500) {
-             alert('Something went wrong on the server');
-         }
-     }};
-             
+            
         </div>
         <hr/>
         <h3>I currently study</h3>
