@@ -4,6 +4,7 @@ var path = require('path');
 var Pool = require('pg').Pool;
 var crypto = require('crypto');
 var bodyParser = require('body-parser');
+var session = require('express-session');
 
 var config = {
     user: 'shivaniii',
@@ -15,6 +16,10 @@ var config = {
 var app = express();
 app.use(morgan('combined'));
 app.use(bodyParser.json());
+app.use(session({
+secret : 'someRandomSecretValue',
+cookie : { maxAge: 1000 * 60 *60 * 24* 30}
+}));
            
 var articles = {
 'article-one' : {
@@ -116,6 +121,7 @@ app.post('/create-user', function (req, res){
              var salt = dbString.split('$')[2];
              var hashedPassword = hash(password, salt); //creating a hash on the password submitted and the original salt
              if (hashedPassword === dbString) {
+                 req.session.auth= [userId: result.rows[0].id];
              
             res.send('Credentials correct!');
             } else {
