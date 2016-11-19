@@ -112,7 +112,7 @@ app.post('/create-user', function (req, res){
     var password = req.body.password;
    pool.query('SELECT * FROM "user" WHERE username = $1,', [username], function(err, result) {
    if (err) {
-            res.status(200).send('user successful');
+            res.status(500).send(err.stringify());
         } else {
             if (result.rows.length === 0) {
                 res.send(400).send('username/password is invalid!');
