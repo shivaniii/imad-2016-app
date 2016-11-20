@@ -20,10 +20,9 @@ console.log(password);
 request.open('POST', 'http://shivaniii.imad.hasura-app.io/login' , true);
 request.setRequestHeader('Content-Type', 'application/json');
 request.send(JSON.stringify({username: username, password: password}));
-submit.value = 'Logging in.. Please wait....'};
 
-var register = document.getElementById('register_btn');
-register.onclick = function () {
+var register = document.getElementById('submit_btn2');
+submit.onclick = function () {
 var request = new XMLHttpRequest();
 request.onreadystatechange = function () {
 if (request.readyState === XMLHttpRequest.DONE) {
@@ -32,7 +31,7 @@ alert('Registered Successfully!');
 register.value = 'User Registered!';
 } else {
 alert('Could not register the user');
-register.value = 'Register';
+submit.value = 'Submit';
 }}};
 
 var username = document.getElementById('username').value;
