@@ -1,14 +1,4 @@
 console.log('Loaded!');
-function LoginForm () {
-var loginHtml =
-<h3> Login to comment on my articles </h3>
-<input type="text" id="username" placeholder="username" />
-<input type="text" id="password" placeholder="******" />
-<br></br>
-<input type="submit" id="submit_btn" value="Login" />
-;
-document.getElementById('login_area').innerHTML = 'loginHtml';
-
 var submit = document.getElementById("submit_btn");
 submit.onclick = function() {
     var request = new XMLHttpRequest();
