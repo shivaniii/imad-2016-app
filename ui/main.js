@@ -1,6 +1,10 @@
 console.log('Loaded!');
-var submit = document.getElementById("submit_btn");
-submit.onclick = function() {
+var LoginForm = function () {
+var username = req.params.auth;
+var password = req.params.auth;
+}
+var Submit = document.getElementById("submit_btn");
+Submit.onclick = function() {
     var request = new XMLHttpRequest();
     request.onreadystatechange = function () {
      if (request.readyState === XMLHttpRequest.DONE) {
