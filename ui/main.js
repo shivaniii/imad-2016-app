@@ -31,7 +31,7 @@ if (request.status === 200) {
 alert('Registered Successfully!');
 register.value = 'User Registered!';
 } else {
-alert('Couldn't register the user');
+alert('Could not register the user');
 register.value = 'Register';
 }}};
 
