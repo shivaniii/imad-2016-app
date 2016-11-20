@@ -19,10 +19,6 @@ app.use(bodyParser.json());
 app.use(session({
 secret : 'someRandomSecretValue',
 cookie : { maxAge: 1000 * 60 *60 * 24* 30}
-store: sessionStore,store // connect-mongo session store
-proxy: true,
-resave: true,
-saveUninitialized: true
 }));
            
 var articles = {
