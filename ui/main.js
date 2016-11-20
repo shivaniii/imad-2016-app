@@ -5,11 +5,11 @@ var loginHtml =
 <input type="text" id="username" placeholder="username" />
 <input type="text" id="password" placeholder="******" />
 <br></br>
-<input type="submit" id="login_btn" value="Login" />
+<input type="submit" id="submit_btn" value="Login" />
 ;
 document.getElementById('login_area').innerHTML = 'loginHtml';
 
-var submit = document.getElementById("login_btn");
+var submit = document.getElementById("submit_btn");
 submit.onclick = function() {
     var request = new XMLHttpRequest();
     request.onreadystatechange = function () {
