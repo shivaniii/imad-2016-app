@@ -22,7 +22,7 @@ cookie : { maxAge: 1000 * 60 *60 * 24* 30}
 }));
            
 var articles = {
-'article-one' : {
+  'article-one' : {
    title : 'Internet | Anumula Shivani',
    heading : 'Internet',
    date : 'Nov 7, 2016',
@@ -57,7 +57,8 @@ var articles = {
     <img id="html imge" src="http://fflib.librarymarket.com/sites/default/files/content/events/html-file-extension-interface-symbol_318-45345.png" />
 
 <p>HTML can embed programs written in a scripting language such as JavaScript which affect the behavior and content of web pages. Inclusion of CSS defines the look and layout of content. The World Wide Web Consortium (W3C), maintainer of both the HTML and the CSS standards, has encouraged the use of CSS over explicit presentational HTML since 1997. </p>`
-}};
+}
+};
       
 function createTemplate (data) {
     var title = data.title;
