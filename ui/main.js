@@ -21,7 +21,7 @@ request.open('POST', 'http://shivaniii.imad.hasura-app.io/login' , true);
 request.setRequestHeader('Content-Type', 'application/json');
 request.send(JSON.stringify({username: username, password: password}));
 
-var register = document.getElementById('submit_btn2');
+var submit = document.getElementById('submit_btn2');
 submit.onclick = function () {
 var request = new XMLHttpRequest();
 request.onreadystatechange = function () {
@@ -41,7 +41,7 @@ console.log(password);
 request.open('POST', '/create-user', true);
 request.setRequestHeader('Content-Type', 'application/json');
 request.send(JSON.stringify({username: username, password: password}));  
-register.value = 'Registering User...';
+submit.value = 'Registering User...';
     
     };
 }
@@ -68,33 +68,5 @@ request.open('GET", '/check-login', true);
 request.send(null);
 }
 
-function loadArticles () {
-    var request = new XMLHttpRequest();
-    request.onreadystatechange = function () {
-        if (request.readyState === XMLHttpRequest.DONE) {
-            var articles = document.getElementById('articles');
-            if (request.status === 200) {
-                var content = '<ul>';
-                var articleData = JSON.parse(this.responseText);
-                for (var i=0; i< articleData.length; i++) {
-                    content += `<li>
-                    <a href="/articles/${articleData[i].title}">${articleData[i].heading}</a>
-                    (${articleData[i].date.split('T')[0]})</li>`;
-                }
-                content += "</ul>"
-                articles.innerHTML = content;
-            } else {
-                articles.innerHTML('Oops! Could not load all articles!')
-            }
-        }
-    };
-    
-    request.open('GET', '/get-articles', true);
-    request.send(null);
-}
-
-
 
 loadLogin();
-
-loadArticles();
