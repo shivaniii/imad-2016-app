@@ -202,10 +202,6 @@ app.get('/logout', function (req, res) {
 
 var pool = new Pool(config);
 
-
-);
-});
-
  app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
