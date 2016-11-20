@@ -35,14 +35,6 @@ var articles = {
 
 <p>The Internet has no centralized governance in either technological implementation or policies for access and usage; each constituent network sets its own policies. Only the overreaching definitions of the two principal name spaces in the Internet, the Internet Protocol address space and the Domain Name System (DNS), are directed by a maintainer organization, the Internet Corporation for Assigned Names and Numbers (ICANN). The technical underpinning and standardization of the core protocols is an activity of the Internet Engineering Task Force (IETF), a non-profit organization of loosely affiliated international participants that anyone may associate with by contributing technical expertise. </p> 
 [Content Source : Wikipedia] `
-<form action="/html/tags/html_form_tag_action.cfm" method="post">
-<div>
-<textarea name="comments" id="comments" style="font-family:sans-serif;font-size:1.2em;">
-Hey... say something!
-</textarea>
-</div>
-<input type="submit" value="Submit">
-</form>
    
 },
 'article-two' : {
@@ -56,14 +48,6 @@ Hey... say something!
 
 <p>HTML can embed programs written in a scripting language such as JavaScript which affect the behavior and content of web pages. Inclusion of CSS defines the look and layout of content. The World Wide Web Consortium (W3C), maintainer of both the HTML and the CSS standards, has encouraged the use of CSS over explicit presentational HTML since 1997. </p>
 ` 
-<form action="/html/tags/html_form_tag_action.cfm" method="post">
-<div>
-<textarea name="comments" id="comments" style="font-family:sans-serif;font-size:1.2em;">
-Hey... say something!
-</textarea>
-</div>
-<input type="submit" value="Submit">
-</form>
    },
 'article-three' : {
        title : 'Javascript | Anumula Shivani',
@@ -75,14 +59,6 @@ Hey... say something!
     <img id="html imge" src="http://fflib.librarymarket.com/sites/default/files/content/events/html-file-extension-interface-symbol_318-45345.png" />
 
 <p>HTML can embed programs written in a scripting language such as JavaScript which affect the behavior and content of web pages. Inclusion of CSS defines the look and layout of content. The World Wide Web Consortium (W3C), maintainer of both the HTML and the CSS standards, has encouraged the use of CSS over explicit presentational HTML since 1997. </p>`
-<form action="/html/tags/html_form_tag_action.cfm" method="post">
-<div>
-<textarea name="comments" id="comments" style="font-family:sans-serif;font-size:1.2em;">
-Hey... say something!
-</textarea>
-</div>
-<input type="submit" value="Submit">
-</form> }
 };
       
 function createTemplate (data) {
