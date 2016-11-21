@@ -2,14 +2,15 @@ console.log('Loaded!');
 var LoginForm = function () {
 var username = req.params.auth;
 var password = req.params.auth;
-}
+};
 var Submit = document.getElementById("submit_btn");
 Submit.onclick = function() {
     var request = new XMLHttpRequest();
     request.onreadystatechange = function () {
      if (request.readyState === XMLHttpRequest.DONE) {
          if (request.status === 200) {
-           alert('Logged in successfully');
+           alert('Logged in successfully')
+           ;
          } else if (request.status === 403) {
              alert('Username/Password is incorrect!');
          } else if (request.status === 500) {
