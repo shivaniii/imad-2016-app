@@ -7,6 +7,14 @@ function loadLoginForm () {
         <input type="submit" id="login_btn" value="Login" />
         <input type="submit" id="register_btn" value="Register" />
         `;
+        function loadLoggedInUser (username) {
+    var loginArea = document.getElementById('login_area');
+    loginArea.innerHTML = `
+        <h3> Hi <i>${username}</i></h3>
+        <a href="/logout">Logout</a>
+    `;
+}
+
     document.getElementById('login_area').innerHTML = loginHtml;
     
     // Submit username/password to login
@@ -79,13 +87,6 @@ function loadLoginForm () {
     };
 }
 
-function loadLoggedInUser (username) {
-    var loginArea = document.getElementById('login_area');
-    loginArea.innerHTML = `
-        <h3> Hi <i>${username}</i></h3>
-        <a href="/logout">Logout</a>
-    `;
-}
 
 function loadLogin () {
     // Check if the user is already logged in
