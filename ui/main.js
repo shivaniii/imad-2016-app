@@ -1,8 +1,4 @@
 console.log('Loaded!');
-var LoginForm = function () {
-var username = req.params.auth;
-var password = req.params.auth;
-};
 var Submit = document.getElementById("submit_btn");
 Submit.onclick = function() {
     var request = new XMLHttpRequest();
