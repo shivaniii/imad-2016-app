@@ -34,7 +34,7 @@ var articles = {
 <p>Internet use grew rapidly in the West from the mid-1990s and from the late 1990s in the developing world. In the 20 years since 1995, Internet use has grown 100-times, measured for the period of one year, to over one third of the world population. Most traditional communications media, including telephony, radio, television, paper mail and newspapers are being reshaped or redefined by the Internet, giving birth to new services such as email, Internet telephony, Internet television music, digital newspapers, and video streaming websites. Newspaper, book, and other print publishing are adapting to website technology, or are reshaped into blogging, web feeds and online news aggregators. The entertainment industry was initially the fastest growing segment on the Internet.[citation needed] The Internet has enabled and accelerated new forms of personal interactions through instant messaging, Internet forums, and social networking. Online shopping has grown exponentially both for major retailers and small businesses and entrepreneurs, as it enables firms to extend their "bricks and mortar" presence to serve a larger market or even sell goods and services entirely online. Business-to-business and financial services on the Internet affect supply chains across entire industries.
 
 <p>The Internet has no centralized governance in either technological implementation or policies for access and usage; each constituent network sets its own policies. Only the overreaching definitions of the two principal name spaces in the Internet, the Internet Protocol address space and the Domain Name System (DNS), are directed by a maintainer organization, the Internet Corporation for Assigned Names and Numbers (ICANN). The technical underpinning and standardization of the core protocols is an activity of the Internet Engineering Task Force (IETF), a non-profit organization of loosely affiliated international participants that anyone may associate with by contributing technical expertise. </p>  `
-   
+
 },
 'article-two' : {
    title : 'HTML | Anumula Shivani',
@@ -171,8 +171,10 @@ app.post('/login', function (req, res) {
       }
    });
 });
-app.post('/check-login', function (req, res){
-      if (req.session && req.session.auth && req.session.auth.userId) {
+
+app.get('/check-login', function (req, res) {
+   if (req.session && req.session.auth && req.session.auth.userId) {
+       // Load the user object
        pool.query('SELECT * FROM "user" WHERE id = $1', [req.session.auth.userId], function (err, result) {
            if (err) {
               res.status(500).send(err.toString());
@@ -183,12 +185,84 @@ app.post('/check-login', function (req, res){
    } else {
        res.status(400).send('You are not logged in');
    }
-
 });
 
 app.get('/logout', function (req, res) {
-    delete req.session.auth;
-    res.send('Logged out!');
+   delete req.session.auth;
+   res.send('<html><body>Logged out!<br/><br/><a href="/">Back to home</a></body></html>');
+});
+
+var pool = new Pool(config);
+
+app.get('/get-articles', function (req, res) {
+   // make a select request
+   // return a response with the results
+   pool.query('SELECT * FROM article ORDER BY date DESC', function (err, result) {
+      if (err) {
+          res.status(500).send(err.toString());
+      } else {
+          res.send(JSON.stringify(result.rows));
+      }
+   });
+});
+
+app.get('/get-comments/:articleName', function (req, res) {
+   // make a select request
+   // return a response with the results
+   pool.query('SELECT comment.*, "user".username FROM article, comment, "user" WHERE article.title = $1 AND article.id = comment.article_id AND comment.user_id = "user".id ORDER BY comment.timestamp DESC', [req.params.articleName], function (err, result) {
+      if (err) {
+          res.status(500).send(err.toString());
+      } else {
+          res.send(JSON.stringify(result.rows));
+      }
+   });
+});
+
+app.post('/submit-comment/:articleName', function (req, res) {
+   // Check if the user is logged in
+    if (req.session && req.session.auth && req.session.auth.userId) {
+        // First check if the article exists and get the article-id
+        pool.query('SELECT * from article where title = $1', [req.params.articleName], function (err, result) {
+            if (err) {
+                res.status(500).send(err.toString());
+            } else {
+                if (result.rows.length === 0) {
+                    res.status(400).send('Article not found');
+                } else {
+                    var articleId = result.rows[0].id;
+                    // Now insert the right comment for this article
+                    pool.query(
+                        "INSERT INTO comment (comment, article_id, user_id) VALUES ($1, $2, $3)",
+                        [req.body.comment, articleId, req.session.auth.userId],
+                        function (err, result) {
+                            if (err) {
+                                res.status(500).send(err.toString());
+                            } else {
+                                res.status(200).send('You commented on this article!')
+                            }
+                        });
+                }
+            }
+       });     
+    } else {
+        res.status(403).send('Only logged in users can comment');
+    }
+});
+
+app.get('/articles/:articleName', function (req, res) {
+  // SELECT * FROM article WHERE title = '\'; DELETE WHERE a = \'asdf'
+  pool.query("SELECT * FROM article WHERE title = $1", [req.params.articleName], function (err, result) {
+    if (err) {
+        res.status(500).send(err.toString());
+    } else {
+        if (result.rows.length === 0) {
+            res.status(404).send('Article not found');
+        } else {
+            var articleData = result.rows[0];
+            res.send(createTemplate(articleData));
+        }
+    }
+  });
 });
 
 var pool = new Pool(config);
