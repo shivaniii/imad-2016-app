@@ -90,19 +90,21 @@ ${date.toDateString()}
 ${content}
 </div>
 <hr/>
-              <h4>Comments</h4>
+             
+          <h4>Comments</h4>
               <div id="comment_form">
               </div>
               <div id="comments">
                 <center>Loading comments...</center>
               </div>
+<div> <textarea id="comment_text" rows="5" cols="100" placeholder="Enter your comment here..."></textarea> </div>
           </div>
           <script type="text/javascript" src="/ui/article.js"></script>
       </body>
     </html>
     `;
     return htmlTemplate;
-}
+} 
 
 function hash (input, salt) {
     // how do we create a hash?
