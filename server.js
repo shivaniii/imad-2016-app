@@ -65,7 +65,7 @@ ${content}
     </html>
     `;
     return htmlTemplate;
-} 
+});
 
 function hash (input, salt) {
     // how do we create a hash?
