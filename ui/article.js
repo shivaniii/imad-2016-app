@@ -92,5 +92,4 @@ function loadComments () {
 
 
 loadLogin();
- loadCommentForm ();
 loadComments();
