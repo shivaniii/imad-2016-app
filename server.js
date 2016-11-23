@@ -97,7 +97,6 @@ ${content}
               <div id="comments">
                 <center>Loading comments...</center>
               </div>
-<div> <textarea id="comment_text" rows="5" cols="100" placeholder="Enter your comment here..."></textarea> </div>
           </div>
           <script type="text/javascript" src="/ui/article.js"></script>
       </body>
