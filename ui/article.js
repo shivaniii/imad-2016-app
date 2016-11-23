@@ -1,5 +1,4 @@
-var currentArticleTitle = window.location.pathname.split('/articles/:articleName')[2];
-
+var pathArray = window.location.pathname.split( '/' );
 function loadCommentForm () {
     var commentFormHtml = `
         <h5>Submit a comment</h5>
