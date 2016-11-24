@@ -55,8 +55,9 @@ ${content}
              
    <hr/>
               <h4>Comments</h4>
-              <div id="comment_form">
-              </div>
+              <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">Comment Form</a> is loading comments...</div>
+ <link rel="stylesheet" type="text/css" href="//www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
+ <script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l
               <div id="comments">
                 <center>Loading comments...</center>
               </div>
