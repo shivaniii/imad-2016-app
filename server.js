@@ -57,8 +57,6 @@ ${content}
  <link rel="stylesheet" type="text/css"
  <script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="//www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&opts=16862&num=10&ts=1480005883438");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
 
-              <div id="comments">
-                <center>Loading comments...</center>
               </div>
           </div>
           <script type="text/javascript" src="/ui/article.js"></script>
