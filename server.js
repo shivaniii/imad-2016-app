@@ -54,12 +54,21 @@ ${content}
 <hr/>
              
    <hr/>
-            <form action="demo_form.asp" id="usrform">
-  Name: <input type="text" name="usrname">
-  <input type="submit">
+         <form method='post'>
+  NAME: <input type='text' name='name' id='name' /><br />
+
+  Email: <input type='text' name='email' id='email' /><br />
+
+  Website: <input type='text' name='website' id='website' /><br />
+
+  Comment:<br />
+  <textarea name='comment' id='comment'></textarea><br />
+
+  <input type='hidden' name='articleid' id='articleid' value='<? echo $_GET["id"]; ?>' />
+
+  <input type='submit' value='Submit' />  
 </form>
 
-<textarea name="comment" form="usrform">Enter text here...</textarea>
               <div id="comments">
                 <center>Loading comments...</center>
               </div>
