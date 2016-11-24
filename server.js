@@ -59,8 +59,6 @@ ${content}
 
   Email: <input type='text' name='email' id='email' /><br />
 
-  Website: <input type='text' name='website' id='website' /><br />
-
   Comment:<br />
   <textarea name='comment' id='comment'></textarea><br />
 
