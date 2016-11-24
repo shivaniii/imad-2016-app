@@ -1,5 +1,5 @@
 //Eg. shivaniii.imad.hasura-app.io/articles/article-one gives you articleone
-var pathArray = window.location.pathname.split('/')[2];
+var pathArray = window.location.pathname.split('/');
 function loadCommentForm () {
     var commentFormHtml = `
         <h5>Submit a comment</h5>
