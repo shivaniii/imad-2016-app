@@ -19,7 +19,7 @@ function loadCommentForm () {
              
                 if (request.status === 200) {
                    
-                    document.getElementById('comments').value = '';
+                    document.getElementById('comment_text').value = '';
                     loadComments();    
                 } else {
                     alert('Error! Could not submit comment');
