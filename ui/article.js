@@ -1,4 +1,4 @@
-//Eg. shivaniii.imad.hasura-app.io/articles/article-one gives you articleone
+//Eg. shivaniii.imad.hasura-app.io/articles/article-one gives you article-one
 var pathArray = window.location.pathname.split('/');
 function loadCommentForm () {
     var commentFormHtml = `
@@ -19,7 +19,7 @@ function loadCommentForm () {
              
                 if (request.status === 200) {
                    
-                    document.getElementById('comment_text').value = '';
+                    document.getElementById('comments').value = '';
                     loadComments();    
                 } else {
                     alert('Error! Could not submit comment');
